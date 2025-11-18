@@ -4,161 +4,233 @@
   <meta charset="UTF-8" />
   <title>Lynceus3D Pilot™ – Cinematic Stereoscopic 3D from Any Drone</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Lynceus3D Pilot™ is the world’s first adaptive stereoscopic engine for drone video. True depth, plumb verticals, motion-aware parallax, and SBS output for YouTube, Viture, Quest, and Pico." />
-    <!-- Open Graph / social sharing -->
+  <meta name="description" content="Lynceus3D Pilot™ turns ordinary drone flights into cinematic, comfortable stereoscopic 3D video with automatic depth balancing and stable geometry." />
+
+  <!-- Open Graph / social sharing -->
   <meta property="og:title" content="Lynceus3D Pilot™ – Cinematic Stereoscopic 3D from Any Drone" />
   <meta property="og:description" content="Bring your drone footage to life with natural depth, stable geometry, and a cinematic 3D feel — automatically." />
   <meta property="og:url" content="https://lynceus3d.com/" />
   <meta property="og:type" content="website" />
-  <!-- You can replace this image URL later with a real og-image file -->
   <meta property="og:image" content="https://lynceus3d.com/logo.png" />
-  <meta property="og:image:alt" content="Lynceus3D Pilot stereoscopic drone video preview" />
+  <meta property="og:image:alt" content="Lynceus3D Pilot logo" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Lynceus3D Pilot™ – Cinematic Stereoscopic 3D from Any Drone" />
   <meta name="twitter:description" content="Turn ordinary drone flights into immersive, comfortable 3D video — no manual tuning." />
   <meta name="twitter:image" content="https://lynceus3d.com/logo.png" />
+
   <style>
+    :root {
+      --bg: #050814;
+      --bg-card: #0b1024;
+      --border-subtle: #22263a;
+      --text-main: #f5f5f5;
+      --text-soft: #cbd0f5;
+      --accent: #c0c7ff;
+      --accent-strong: #ff3b5c;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #050814;
-      color: #f5f5f5;
+      background: var(--bg);
+      color: var(--text-main);
       line-height: 1.5;
     }
+
     .page {
       max-width: 960px;
       margin: 0 auto;
       padding: 32px 16px 64px;
     }
+
+    header {
+      margin-bottom: 40px;
+    }
+
     h1, h2, h3 {
+      margin: 0 0 12px;
       font-weight: 600;
-      color: #ffffff;
     }
-    .tagline {
-      font-size: 1.25rem;
-      color: #c0c7ff;
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    ul {
+      margin: 0 0 16px;
+      padding-left: 20px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: #11172b;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .hero-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
       margin-top: 8px;
-      margin-bottom: 24px;
+      margin-bottom: 16px;
     }
+
+    .hero-title-logo {
+      width: 60px; /* adjust this for bigger/smaller logo */
+      height: auto;
+      flex-shrink: 0;
+    }
+
+    .tagline {
+      font-size: 1.05rem;
+      color: var(--text-soft);
+      margin-bottom: 16px;
+    }
+
     .cta-block {
       margin-top: 24px;
-      margin-bottom: 40px;
-      padding: 16px;
+      padding: 20px 24px;
       border-radius: 12px;
-      background: radial-gradient(circle at top left, #2030ff33, #000000);
-      border: 1px solid #30375a;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
     }
-    .cta-input-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 12px;
+
+    .cta-block h2 {
+      margin-bottom: 8px;
+      font-size: 1.15rem;
     }
-    input[type="email"] {
-      flex: 1 1 220px;
-      padding: 10px 12px;
-      border-radius: 8px;
-      border: 1px solid #4b537a;
-      background: #050814;
-      color: #f5f5f5;
+
+    .cta-block p {
+      margin-bottom: 8px;
+      color: var(--text-soft);
       font-size: 0.95rem;
     }
-    button.cta {
-      flex: 0 0 auto;
+
+    .cta-input-row {
+      margin-top: 12px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .cta-input-row input[type="email"] {
+      flex: 1 1 220px;
+      padding: 10px 12px;
+      border-radius: 4px;
+      border: 1px solid #30375a;
+      background: #050814;
+      color: var(--text-main);
+      font-size: 0.95rem;
+    }
+
+    .cta-input-row input[type="email"]::placeholder {
+      color: #6b7280;
+    }
+
+    .cta-input-row input[type="email"]:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px var(--accent);
+    }
+
+    .cta {
       padding: 10px 18px;
-      border-radius: 8px;
+      border-radius: 4px;
       border: none;
       font-size: 0.95rem;
       font-weight: 600;
-      cursor: pointer;
-      background: #ff2b4a;
+      background: var(--accent-strong);
       color: #ffffff;
+      cursor: pointer;
+      white-space: nowrap;
     }
+
+    .cta:hover {
+      background: #ff5672;
+    }
+
     section {
       margin-bottom: 40px;
     }
-    .pill {
-      display: inline-block;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: #11172b;
-      border: 1px solid #2b3554;
-      font-size: 0.75rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: #a9b3ff;
-      margin-bottom: 12px;
-    }
-    ul {
-      padding-left: 18px;
-    }
+
     .cols {
       display: grid;
-      grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
-      gap: 24px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 32px;
+      margin-top: 16px;
     }
-    @media (max-width: 768px) {
-      .cols {
-        grid-template-columns: minmax(0, 1fr);
-      }
+
+    .cols h3 {
+      margin-bottom: 8px;
     }
+
     footer {
-      border-top: 1px solid #22263a;
+      border-top: 1px solid var(--border-subtle);
       padding-top: 16px;
-      margin-top: 32px;
-      font-size: 0.8rem;
+      margin-top: 40px;
+      text-align: center;
+      font-size: 0.85rem;
       color: #9ca3c7;
     }
-  .hero-logo {
-    width: 100%;
-    max-width: 800px;      /* was 1200 – this makes it shorter */
-    height: auto;
-    display: block;
-    margin: 16px auto 32px; /* a bit closer to the top, same space below */
-    opacity: 0.98;
-  }
 
-  .footer-logo {
-    max-width: 120px;
-    height: auto;
-    display: block;
-    margin: 0 auto 8px;
-    opacity: 0.9;
-  }
-    .hero-title {
-    display: flex;
-    align-items: center;
-    gap: 12px;        
-    margin-top: 8px;
-    margin-bottom: 12px;
-}
+    .footer-logo {
+      max-width: 120px;
+      height: auto;
+      display: block;
+      margin: 0 auto 8px;
+      opacity: 0.9;
+    }
 
-.hero-title-logo {
-    width: 60px;    /* was 44px */
-    height: auto;
-    flex-shrink: 0;
-}
+    @media (max-width: 720px) {
+      .hero-title {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .cols {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="page">
-    
     <header>
-    <div class="pill">Lynceus3D Pilot™</div>
+      <div class="pill">Lynceus3D Pilot™</div>
 
-    <div class="hero-title">
-      <img src="logo.png" alt="Lynceus3D logo" class="hero-title-logo" />
-      <h1>Cinematic Stereoscopic 3D — From Any Drone.</h1>
-    </div>
+      <div class="hero-title">
+        <img src="logo.png" alt="Lynceus3D logo" class="hero-title-logo" />
+        <h1>Cinematic Stereoscopic 3D — From Any Drone.</h1>
+      </div>
 
-    <p class="tagline">
+      <p class="tagline">
         Bring your drone footage to life with natural depth, stable geometry, and a cinematic 3D feel — automatically.
         No complex rigs. No manual tuning. Just clean, comfortable, visually immersive 3D.
-    </p>
+      </p>
+
       <p style="font-size:0.85rem; opacity:0.85; margin-top:-8px; margin-bottom:18px;">
         <strong>Patent Pending · Lynceus3D Pilot™</strong>
       </p>
+
       <div class="cta-block">
         <h2>Join the Lynceus3D Pilot™ Early Access Waitlist</h2>
         <p>Get launch updates, early demos, and first access when we open the doors.</p>
@@ -175,8 +247,8 @@
     <section>
       <h2>Why Lynceus3D Pilot?</h2>
       <p>
-        Drone footage was always meant to be 3D — but the tools to do it properly didn’t exist. Traditional 3D workflows
-        are inconsistent, uncomfortable, and too technical for most people to use. It’s easy to end up with leaning trees,
+        Drone footage was always meant to be 3D — but the tools to do it properly didn’t exist. Traditional 3D workflows are
+        inconsistent, uncomfortable, and too technical for most people to use. It’s easy to end up with leaning trees,
         distorted buildings, and 3D that feels “off”.
       </p>
       <p>
@@ -188,9 +260,7 @@
     <section class="cols">
       <div>
         <h3>Autopilot™</h3>
-        <p style="margin-bottom:8px;">
-          Your intelligent 3D engine.
-        </p>
+        <p>Your intelligent 3D engine.</p>
         <ul>
           <li>Automatically balances 3D depth for a comfortable viewing experience.</li>
           <li>Keeps verticals (trees, towers, buildings) standing upright instead of “leaning”.</li>
@@ -201,11 +271,10 @@
           Autopilot turns raw footage into consistent, watchable 3D without forcing you to become a stereo engineer.
         </p>
       </div>
+
       <div>
         <h3>FlightView™</h3>
-        <p style="margin-bottom:8px;">
-          Your final-check 3D preview surface.
-        </p>
+        <p>Your final-check 3D preview surface.</p>
         <ul>
           <li>Clean side-by-side playback optimized for YouTube, Viture, Quest, Pico, and other XR headsets.</li>
           <li>Lets you visually confirm depth, comfort, and geometry before you publish.</li>
@@ -236,7 +305,7 @@
     <section>
       <h2>Who It’s For</h2>
       <ul>
-        <li><strong>Drone pilots & filmmakers</strong> – turn everyday flights into immersive 3D sequences.</li>
+        <li><strong>Drone pilots &amp; filmmakers</strong> – turn everyday flights into immersive 3D sequences.</li>
         <li><strong>VR / XR viewers (Viture, Quest, Pico)</strong> – finally get clean, properly formatted SBS content.</li>
         <li><strong>3D enthusiasts</strong> – enjoy consistent, stable stereo without manual tweaking.</li>
         <li><strong>Technical professionals</strong> – anyone who needs reliable spatial accuracy and clean depth presentation.</li>
@@ -256,7 +325,6 @@
         <strong>Want early access?</strong> Use the waitlist form at the top of this page and we’ll keep you in the loop.
       </p>
     </section>
-
 
     <footer>
       <img src="logo.png" alt="Lynceus3D Pilot logo" class="footer-logo" />
