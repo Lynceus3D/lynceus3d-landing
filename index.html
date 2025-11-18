@@ -126,18 +126,36 @@
     margin: 0 auto 8px;
     opacity: 0.9;
   }
+    .hero-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;        
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+
+.hero-title-logo {
+    width: 44px;      /* adjust size later if needed */
+    height: auto;
+    flex-shrink: 0;
+}
   </style>
 </head>
 <body>
   <div class="page">
     
     <header>
-      <div class="pill">Lynceus3D Pilot™</div>
+    <div class="pill">Lynceus3D Pilot™</div>
+
+    <div class="hero-title">
+      <img src="logo.png" alt="Lynceus3D logo" class="hero-title-logo" />
       <h1>Cinematic Stereoscopic 3D — From Any Drone.</h1>
-      <p class="tagline">
+    </div>
+
+    <p class="tagline">
         Bring your drone footage to life with natural depth, stable geometry, and a cinematic 3D feel — automatically.
         No complex rigs. No manual tuning. Just clean, comfortable, visually immersive 3D.
-      </p>
+    </p>
       <p style="font-size:0.85rem; opacity:0.85; margin-top:-8px; margin-bottom:18px;">
         <strong>Patent Pending · Lynceus3D Pilot™</strong>
       </p>
